@@ -1,0 +1,23 @@
+extends ./layout
+
+block content
+    .row
+        table.table.table-hover.table-bordered
+            thead
+                tr
+                    th 电影分类名称
+                    th 加入时间
+                    th 最近更新
+                    th 修改
+                    th 删除
+            tbody
+                each item in categorys
+                    tr(class="item-id-" + item._id)
+                        td= item.name
+                        td= moment(item.meta.createAt).format('YYYY-MM-DD H:mm:ss')
+                        td= moment(item.meta.updateAt).format('YYYY-MM-DD H:mm:ss')
+                        td
+                            a(target="_blank", href="/admin/user_update/" + item._id) 修改
+                        td
+                            button.btn.btn-danger.del(type="button", data-id=item._id) 删除
+    script(src="/javascripts/deleteUser.js")

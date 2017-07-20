@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('common/head'); %>
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('common/header'); %>
+  <div class="container">
+    <div class="row">
+      <% for (var i = 0; i < movies.length; i++) { -%>
+        <div class="col-md-2">
+          <div class="thumbnail">
+            <a href="/movie/<%= movies[i]._id %>">
+              <img src="<%= movies[i].poster %>" alt="<%= movies[i].title%>">
+            </a>
+            <div class="caption">
+              <h3><%= movies[i].title %></h3>
+              <p>
+                <a class="btn btn-primary" href="/movie/<%= movies[i]._id %>">
+                  观看影片
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% } -%>
+    </div>
+  </div>
+</body>
+</html>

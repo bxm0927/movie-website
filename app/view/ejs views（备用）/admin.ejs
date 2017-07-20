@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('common/head'); %>
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('common/header'); %>
+  <div class="container">
+    <div class="row">
+      <form class="form-horizontal" action="/admin/movie/new" method="POST">
+        <!-- 添加一个隐藏的表单域,来存储更新数据的id -->
+        <input type="hidden" name="movie[_id]" value="<%=movie._id%>">
+        <div class="form-group">
+          <label for="inputtitle" class="col-sm-2 control-lable">电影名字</label>
+          <div class="col-sm-10">
+            <input id="inputtitle" class="form-control" type="text" name="movie[title]" value="<%=movie.title%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <lable for="inputdoctor" class="col-sm-2 control-lable">电影导演</lable>
+          <div class="col-sm-10">
+            <input id="inputdoctor" class="form-control" type="text" name="movie[doctor]" value="<%=movie.doctor%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputcountry" class="col-sm-2 control-lable">国家</label>
+          <div class="col-sm-10">
+             <input id="inputcountry" class="form-control" type="text" name="movie[country]" value="<%=movie.country%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputlanguage" class="col-sm-2 control-lable">语种</label>
+          <div class="col-sm-10">
+             <input id="inputlanguage" class="form-control" type="text" name="movie[language]" value="<%=movie.language%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputposter" class="col-sm-2 control-lable">海报地址</label>
+          <div class="col-sm-10">
+            <input id="inputposter" class="form-control" type="text" name="movie[poster]" value="<%=movie.poster%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputflash" class="col-sm-2 control-lable">片源地址</label>
+          <div class="col-sm-10">
+             <input id="inputflash" class="form-control" type="text" name="movie[flash]" value="<%=movie.flash%>">
+          </div> 
+        </div>
+
+        <div class="form-group">
+          <label for="inputyear" class="col-sm-2 control-lable">上映年代</label>
+          <div class="col-sm-10">
+            <input id="inputyear" class="form-control" type="text" name="movie[year]" value="<%=movie.year%>">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputsummary" class="col-sm-2 control-lable">电影简介</label>
+          <div class="col-sm-10">
+            <textarea id="inputsummary" class="col-sm-10 form-control" type="text" name="movie[summary]"><%=movie.summary%>
+            </textarea>
+          </div>     
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" type="submit">录入</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</body>
+</html>

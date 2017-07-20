@@ -1,0 +1,53 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Brand" width="20" height="20"></a>
+
+        </div>
+
+        <div class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li class="hidden-sm"><a href="/">首页</a></li>
+                <li><a href="">个人中心</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">后台 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-header">分类管理</li>
+                        <li><a href="/admin/add_category">电影分类录入</a></li>
+                        <li><a href="/admin/category_list">电影分类列表</a></li>
+                        <li role="separator" class="divider"></li>
+
+                        <li class="dropdown-header">电影管理</li>
+                        <li><a href="/admin/add_movie">电影录入</a></li>
+                        <li><a href="/admin/movie_list">电影列表</a></li>
+                        <li role="separator" class="divider"></li>
+
+                        <li class="dropdown-header">用户管理</li>
+                        <li><a href="/admin/add_user">用户录入</a></li>
+                        <li><a href="/admin/user_list">用户列表</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                if user
+                    <li><a>欢迎您：#{user.name}</a></li>
+                    <li><a href="/user_logout">注销</a></li>
+                else
+                    <li><a href="/signin">登录</a></li>
+                    <li><a href="/signup">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+//- 后台
+//- 电影管理（电影录入、电影列表）
+//- 用户管理（用户录入、用户列表）

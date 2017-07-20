@@ -1,0 +1,14 @@
+extends ./layout
+
+block content
+    .row
+        each item in movies
+            .col-md-3.col-sm-3
+                .thumbnail
+                    img(src=item.poster, alt=item.title)
+                    .caption
+                        h3.ellipsis-1.center= item.title
+                        p.ellipsis-2= item.summary
+                        p
+                            a.mr-10.btn.btn-primary(href="/detail/" + item._id, role="button") 观看
+                            a.btn.btn-default(href="", role="button", disabled) 收藏

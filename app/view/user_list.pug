@@ -1,0 +1,27 @@
+extends ./layout
+
+block content
+    .row
+        table.table.table-hover.table-bordered
+            thead
+                tr
+                    th 用户名
+                    th 密码
+                    th 角色
+                    th 注册时间
+                    th 最近更新
+                    th 更新
+                    th 删除
+            tbody
+                each item in users
+                    tr(class="item-id-" + item._id)
+                        td= item.name
+                        td= item.password
+                        td= item.role
+                        td= moment(item.meta.createAt).format('YYYY-MM-DD H:mm:ss')
+                        td= moment(item.meta.updateAt).format('YYYY-MM-DD H:mm:ss')
+                        td
+                            a(target="_blank", href="/admin/user_update/" + item._id) 修改
+                        td
+                            button.btn.btn-danger.del(type="button", data-id=item._id) 删除
+    script(src="/javascripts/deleteUser.js")

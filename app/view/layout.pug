@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title= title
+        link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src="/jquery/dist/jquery.min.js")
+        script(src="/bootstrap/dist/js/bootstrap.min.js")
+    body
+        include ./includes/nav
+        .container
+            .row
+                .page-header
+                    h1= title
+            block content

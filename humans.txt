@@ -1,0 +1,33 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+你在该项目的职位：你的名字
+
+网站：电子邮件，联系表格链接
+
+Twitter：你的Twitter用户名称
+
+地点： 城市，社区，国家
+
+
+# THANKS
+
+名称： 名称或网址
+
+
+# SITE
+
+最后更新: 年 /月 /天
+
+标准： HTML5, CSS3,..
+
+组件： Modernizr, jQuery, etc.
+
+软件：用于开发网站的软件。
+
+
+# TECHNOLOGY COLOPHON
+
+CSS3, HTML5, Apache Server Configs, jQuery, Modernizr, Normalize.css

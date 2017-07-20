@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('common/head'); %>
+  <title><%= title %></title>
+</head>
+<body>
+  <%- include('common/header'); %>
+  <div class="container">
+    <div class="row">
+      <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>电影名字</th>
+            <th>导演</th>
+            <th>国家</th>
+            <th>上映年份</th>
+            <th>录入时间</th>
+            <th>查看</th>
+            <th>更新</th>
+            <th>删除</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (var i = 0; i < movies.length; i++) { -%>
+            <tr class="item-id-<%= movies[i].id %>">
+              <td><%= movies[i].title %></td>
+              <td><%= movies[i].doctor %></td>
+              <td><%= movies[i].country %></td>
+              <td><%= movies[i].year %></td>
+              <td><%= moment(movies[i].meta.updateAt).format('MM/DD/YYYY')%></td>
+              <td>
+                <a target="_blank" href="../movie/<%= movies[i].id%>">查看</a>
+              </td>
+              <td>
+                <a target="_blank" href="/admin/update/<%= movies[i].id%>">修改</a>
+              </td>
+              <td>
+                <button class="btn btn-danger del" type="button" 
+                data-id="<%=movies[i].id%>">删除</button>
+              </td>
+            </tr>
+          <% } -%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- 引入删除的ajax的请求 -->
+  <script src="/js/admin.js"></script>
+</body>
+</html>

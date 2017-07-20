@@ -1,0 +1,22 @@
+extends ./layout
+
+block content
+    .row
+        form.form-horizontal(method="post", action="/admin/save_user")
+            input(type="hidden", name="user[_id]", value=user._id)
+            .form-group
+                label.col-sm-2.control-label(for="name") 用户名
+                .col-sm-10
+                    input#name.form-control(type="text", name="user[name]", value=user.name)
+            .form-group
+                label.col-sm-2.control-label(for="password") 密码
+                .col-sm-10
+                    input#password.form-control(type="text", name="user[password]", value=user.password)
+            .form-group
+                label.col-sm-2.control-label(for="role") 权限
+                .col-sm-10
+                    input#role.form-control(type="text", name="user[role]", value=user.role)
+
+            .form-group
+                .col-sm-offset-6.col-sm-9
+                    button.btn.btn-success(type="submit") 录入
