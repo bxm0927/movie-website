@@ -3,8 +3,6 @@
 
 ![图片预览](http://oph264zoo.bkt.clouddn.com/17-7-20/4151066.jpg)
 
-👉 GitHub: https://github.com/bxm0927/movie-website
-
 此项目是基于 Node.js + Express + mongoDB + Bootstrap 搭建的电影网站。
 
 主要功能模块：
