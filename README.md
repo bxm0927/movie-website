@@ -1,9 +1,9 @@
 
 # 电影网站
 
-👉 GitHub: https://github.com/bxm0927/movie-website
+![图片预览](http://oph264zoo.bkt.clouddn.com/17-7-20/50960809.jpg)
 
-👉 项目演示地址: http://es6lottery.t.imooc.io（视频？jpg？）
+👉 GitHub: https://github.com/bxm0927/movie-website
 
 此项目是基于 Node.js + Express + mongoDB + Bootstrap 搭建的电影网站。
 
