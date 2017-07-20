@@ -1,7 +1,7 @@
 
 # 电影网站
 
-![图片预览](http://oph264zoo.bkt.clouddn.com/17-7-20/50960809.jpg)
+![图片预览](http://oph264zoo.bkt.clouddn.com/17-7-20/4151066.jpg)
 
 👉 GitHub: https://github.com/bxm0927/movie-website
 
